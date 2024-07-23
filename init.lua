@@ -1,8 +1,8 @@
 -- bootstrap lazy.nvim, LazyVim and your plugins
 require("config.lazy")
 require("lint").linters_by_ft = {
-  bash = { "shellcheck" },
-  sh = { "shellcheck" },
+    bash = { "shellcheck" },
+    sh = { "shellcheck" },
 }
 vim.o.tabstop = 4 -- A TAB character looks like 4 spaces
 vim.o.expandtab = true -- Pressing the TAB key will insert spaces instead of a TAB character
