@@ -15,4 +15,8 @@ vim.keymap.set("n", "<C-d>", "<C-d>zz", { desc = "Center cursor after moving dow
 vim.keymap.set("n", "<C-u>", "<C-u>zz", { desc = "Center cursor after moving down half-page" })
 vim.keymap.set("n", "G", "Gzz", { desc = "Center cursor after moving down half-page" })
 
+vim.keymap.set("v", "<A-j>", "ddkP") -- move line up(v)
+vim.keymap.set("n", "<A-j>", "ddkP") -- move line up(n)
+vim.keymap.set("n", "<A-k>", "ddp") -- move line down(n)
+vim.keymap.set("v", "<A-k>", "ddp") -- move line down(v)
 vim.cmd("colorscheme kanagawa")
