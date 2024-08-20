@@ -5,6 +5,7 @@ require("lint").linters_by_ft = {
     bash = { "shellcheck" },
     sh = { "shellcheck" },
 }
+vim.cmd("colorscheme kanagawa")
 
 vim.o.tabstop = 4 -- A TAB character looks like 4 spaces
 vim.o.expandtab = true -- Pressing the TAB key will insert spaces instead of a TAB character
@@ -19,4 +20,12 @@ vim.keymap.set("v", "<A-j>", "ddkP") -- move line up(v)
 vim.keymap.set("n", "<A-j>", "ddkP") -- move line up(n)
 vim.keymap.set("n", "<A-k>", "ddp") -- move line down(n)
 vim.keymap.set("v", "<A-k>", "ddp") -- move line down(v)
-vim.cmd("colorscheme kanagawa")
+
+-- YankyPut
+vim.keymap.set({ "n", "x" }, "p", "<Plug>(YankyPutAfter)")
+vim.keymap.set({ "n", "x" }, "P", "<Plug>(YankyPutBefore)")
+vim.keymap.set({ "n", "x" }, "gp", "<Plug>(YankyGPutAfter)")
+vim.keymap.set({ "n", "x" }, "gP", "<Plug>(YankyGPutBefore)")
+
+vim.keymap.set("n", "<c-p>", "<Plug>(YankyPreviousEntry)")
+vim.keymap.set("n", "<c-n>", "<Plug>(YankyNextEntry)")
