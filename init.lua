@@ -5,7 +5,6 @@ require("lint").linters_by_ft = {
     bash = { "shellcheck" },
     sh = { "shellcheck" },
 }
-vim.cmd("colorscheme kanagawa")
 
 vim.o.tabstop = 4 -- A TAB character looks like 4 spaces
 vim.o.expandtab = true -- Pressing the TAB key will insert spaces instead of a TAB character
