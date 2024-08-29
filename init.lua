@@ -57,3 +57,7 @@ end)
 vim.keymap.set("v", "g<C-x>", function()
     require("dial.map").manipulate("decrement", "gvisual")
 end)
+
+-- For some reason the ctrl-jk keys only work when "source $MYVIMRC" command is run. This is a janky way of doing it automatically
+vim.api.nvim_create_autocmd("VimEnter", { command = "source $MYVIMRC" })
+vim.api.nvim_create_autocmd("BufAdd", { command = "source $MYVIMRC" })
