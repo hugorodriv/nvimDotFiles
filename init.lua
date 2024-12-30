@@ -7,6 +7,8 @@ require("lint").linters_by_ft = {
     sh = { "shellcheck" },
 }
 
+vim.g.snacks_animate = false --Disable animations globally
+
 -- Colorscheme
 vim.cmd("colorscheme kanagawa")
 
